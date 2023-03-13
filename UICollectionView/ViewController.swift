@@ -23,9 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLayout()
         setupHierarchy()
-        
+        setupLayout()
     }
     
     // MARK: - Setup
