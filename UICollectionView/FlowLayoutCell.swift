@@ -8,6 +8,7 @@
 import UIKit
 
 class FlowLayoutCell: UICollectionViewCell {
+    
     static let identifier = "FlowLayoutCell"
     
     override init(frame: CGRect) {
