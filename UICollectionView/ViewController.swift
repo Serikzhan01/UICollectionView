@@ -6,17 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
    
     // MARK: - Outlets
-    private lazy var сollectionView: UICollectionView = {
+    fileprivate lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(FlowLayoutCell.self, forCellWithReuseIdentifier: FlowLayoutCell.identifier)
+        collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        return сollectionView
+        return collectionView
     }()
     
     // MARK: - Lifecycle
@@ -30,18 +31,16 @@ class ViewController: UIViewController {
     // MARK: - Setup
     
     private func setupHierarchy() {
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemBlue
-        title = "simple example"
-        view.addSubview(сollectionView)
+        title = "Books"
+        view.addSubview(collectionView)
     }
     
     private func setupLayout() {
-        NSLayoutConstraint.activate([
-            сollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            сollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            сollectionView.topAnchor.constraint(equalTo: view.topAnchor),
-            сollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        collectionView.snp.makeConstraints{ make in
+            make.left.top.right.bottom.equalTo(view)
+        }
     }
     
     // MARK: - Actions
