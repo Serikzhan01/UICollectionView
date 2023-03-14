@@ -1,15 +1,58 @@
 //
-//  UIKit+Extensions.swift
+//  ViewController.swift
 //  UICollectionView
 //
 //  Created by Serikzhan on 13.03.2023.
 //
 
 import UIKit
+import SnapKit
+
+class ViewController: UIViewController {
+   
+    // MARK: - Outlets
+    fileprivate lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        return collectionView
+    }()
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupHierarchy()
+        setupLayout()
+    }
+    
+    // MARK: - Setup
+    
+    private func setupHierarchy() {
+        view.backgroundColor = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Books"
+        view.addSubview(collectionView)
+    }
+    
+    private func setupLayout() {
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.left.bottom.right.equalTo(view)
+        }
+    }
+    
+    // MARK: - Actions
+
+}
 
 // MARK: - Extensions
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    // MARK: - UICollectionViewDataSource Extensions
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Model.images.count
@@ -29,7 +72,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 170, height: 300)
+        return CGSize(width: 160, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

@@ -30,6 +30,7 @@ class Cell: UICollectionViewCell {
     lazy var cloudImage: UIImageView = {
         let image = UIImage(systemName: "cloud")
         let imageView = UIImageView(image: image)
+        imageView.tintColor = .white
         return imageView
     }()
     

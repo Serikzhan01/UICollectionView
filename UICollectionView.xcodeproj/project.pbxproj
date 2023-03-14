@@ -12,11 +12,13 @@
 		8C63FE3D29BF1B8800121C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C63FE3C29BF1B8800121C8D /* ViewController.swift */; };
 		8C63FE4229BF1B8C00121C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C63FE4129BF1B8C00121C8D /* Assets.xcassets */; };
 		8C63FE4529BF1B8C00121C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C63FE4329BF1B8C00121C8D /* LaunchScreen.storyboard */; };
-		8C63FE5629BF374B00121C8D /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C63FE5529BF374B00121C8D /* UIKit+Extensions.swift */; };
 		8CAD35DF29C0A3D700886AA6 /* FlowLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35DE29C0A3D700886AA6 /* FlowLayoutCell.swift */; };
 		8CAD35E129C0A57B00886AA6 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35E029C0A57B00886AA6 /* Cell.swift */; };
 		8CAD35E329C0AF7900886AA6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35E229C0AF7900886AA6 /* Model.swift */; };
 		8CAD35E629C0B21E00886AA6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CAD35E529C0B21E00886AA6 /* SnapKit */; };
+		8CAD35EA29C0CCFD00886AA6 /* FlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35E929C0CCFD00886AA6 /* FlowLayoutViewController.swift */; };
+		8CAD35ED29C0D26600886AA6 /* CompositionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35EC29C0D26600886AA6 /* CompositionalCell.swift */; };
+		8CAD35EF29C0D32800886AA6 /* CompositionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35EE29C0D32800886AA6 /* CompositionalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +29,12 @@
 		8C63FE4129BF1B8C00121C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C63FE4429BF1B8C00121C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C63FE4629BF1B8C00121C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C63FE5529BF374B00121C8D /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		8CAD35DE29C0A3D700886AA6 /* FlowLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutCell.swift; sourceTree = "<group>"; };
 		8CAD35E029C0A57B00886AA6 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		8CAD35E229C0AF7900886AA6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8CAD35E929C0CCFD00886AA6 /* FlowLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutViewController.swift; sourceTree = "<group>"; };
+		8CAD35EC29C0D26600886AA6 /* CompositionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalCell.swift; sourceTree = "<group>"; };
+		8CAD35EE29C0D32800886AA6 /* CompositionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,11 @@
 		8C63FE3729BF1B8800121C8D /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				8CAD35EB29C0D23100886AA6 /* CompositionalCellExample */,
+				8CAD35E729C0CCA000886AA6 /* FlowLayoutExample */,
+				8CAD35E829C0CCBB00886AA6 /* FlowLayoutFinal */,
 				8C63FE4D29BF1BE700121C8D /* Resources */,
 				8C63FE4C29BF1BDA00121C8D /* Sources */,
-				8C63FE3C29BF1B8800121C8D /* ViewController.swift */,
-				8CAD35E029C0A57B00886AA6 /* Cell.swift */,
-				8CAD35E229C0AF7900886AA6 /* Model.swift */,
-				8C63FE5529BF374B00121C8D /* UIKit+Extensions.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -86,7 +89,6 @@
 		8C63FE4D29BF1BE700121C8D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8CAD35DE29C0A3D700886AA6 /* FlowLayoutCell.swift */,
 				8C63FE4129BF1B8C00121C8D /* Assets.xcassets */,
 				8C63FE5029BF1C1E00121C8D /* Configuration */,
 			);
@@ -116,6 +118,34 @@
 				8C63FE4629BF1B8C00121C8D /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8CAD35E729C0CCA000886AA6 /* FlowLayoutExample */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD35E929C0CCFD00886AA6 /* FlowLayoutViewController.swift */,
+				8CAD35DE29C0A3D700886AA6 /* FlowLayoutCell.swift */,
+			);
+			path = FlowLayoutExample;
+			sourceTree = "<group>";
+		};
+		8CAD35E829C0CCBB00886AA6 /* FlowLayoutFinal */ = {
+			isa = PBXGroup;
+			children = (
+				8C63FE3C29BF1B8800121C8D /* ViewController.swift */,
+				8CAD35E029C0A57B00886AA6 /* Cell.swift */,
+				8CAD35E229C0AF7900886AA6 /* Model.swift */,
+			);
+			path = FlowLayoutFinal;
+			sourceTree = "<group>";
+		};
+		8CAD35EB29C0D23100886AA6 /* CompositionalCellExample */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD35EE29C0D32800886AA6 /* CompositionalView.swift */,
+				8CAD35EC29C0D26600886AA6 /* CompositionalCell.swift */,
+			);
+			path = CompositionalCellExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,12 +224,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAD35EF29C0D32800886AA6 /* CompositionalView.swift in Sources */,
 				8CAD35E329C0AF7900886AA6 /* Model.swift in Sources */,
 				8C63FE3D29BF1B8800121C8D /* ViewController.swift in Sources */,
 				8C63FE3929BF1B8800121C8D /* AppDelegate.swift in Sources */,
-				8C63FE5629BF374B00121C8D /* UIKit+Extensions.swift in Sources */,
+				8CAD35ED29C0D26600886AA6 /* CompositionalCell.swift in Sources */,
 				8C63FE3B29BF1B8800121C8D /* SceneDelegate.swift in Sources */,
 				8CAD35DF29C0A3D700886AA6 /* FlowLayoutCell.swift in Sources */,
+				8CAD35EA29C0CCFD00886AA6 /* FlowLayoutViewController.swift in Sources */,
 				8CAD35E129C0A57B00886AA6 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
