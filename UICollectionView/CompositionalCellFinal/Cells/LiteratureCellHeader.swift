@@ -10,16 +10,14 @@ import SnapKit
 
 class LiteratureCellHeader: UICollectionReusableView {
     
-    static let identifier = "LiteratureCell"
+    static let identifier = "LiteratureCellHeader"
     
     // MARK: - Outlets
     
-    private let image: UIImageView = {
-        let imageView = UIImageView()
-        imageView.layer.cornerRadius = 5
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
-        return imageView
+    lazy var title: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        return label
     }()
     
     // MARK: - Initializers
@@ -38,23 +36,18 @@ class LiteratureCellHeader: UICollectionReusableView {
     // MARK: - Setup
     
     private func setupHierarchy() {
-        contentView.addSubview(image)
+        addSubview(title)
     }
     
     private func setupLayout() {
-        image.snp.makeConstraints { make in
-            make.left.top.right.bottom.equalTo(contentView)
+        title.snp.makeConstraints { make in
+            make.bottom.equalTo(self)
+            make.left.equalTo(self)
         }
-    }
-    
-    // MARK: - Configuration
-    
-    func configuration(model: CompositionalModel) {
-        self.image.image = UIImage(named: model.image)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.image.image = nil
+        title.text = nil
     }
 }
