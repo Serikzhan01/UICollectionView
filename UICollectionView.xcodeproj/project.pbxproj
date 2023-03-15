@@ -19,6 +19,12 @@
 		8CAD35EA29C0CCFD00886AA6 /* FlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35E929C0CCFD00886AA6 /* FlowLayoutViewController.swift */; };
 		8CAD35ED29C0D26600886AA6 /* CompositionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35EC29C0D26600886AA6 /* CompositionalCell.swift */; };
 		8CAD35EF29C0D32800886AA6 /* CompositionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35EE29C0D32800886AA6 /* CompositionalView.swift */; };
+		8CAD35F229C1C46700886AA6 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35F129C1C46700886AA6 /* CompositionalLayoutViewController.swift */; };
+		8CAD35F529C1C7DF00886AA6 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35F429C1C7DF00886AA6 /* FeaturedCell.swift */; };
+		8CAD35F729C1CAF000886AA6 /* TopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35F629C1CAF000886AA6 /* TopCell.swift */; };
+		8CAD35F929C1CB0A00886AA6 /* LiteratureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35F829C1CB0A00886AA6 /* LiteratureCell.swift */; };
+		8CAD35FB29C1D67C00886AA6 /* CompositionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35FA29C1D67C00886AA6 /* CompositionalModel.swift */; };
+		8CAD35FD29C1EE7700886AA6 /* LiteratureCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD35FC29C1EE7700886AA6 /* LiteratureCellHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		8CAD35E929C0CCFD00886AA6 /* FlowLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutViewController.swift; sourceTree = "<group>"; };
 		8CAD35EC29C0D26600886AA6 /* CompositionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalCell.swift; sourceTree = "<group>"; };
 		8CAD35EE29C0D32800886AA6 /* CompositionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalView.swift; sourceTree = "<group>"; };
+		8CAD35F129C1C46700886AA6 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
+		8CAD35F429C1C7DF00886AA6 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
+		8CAD35F629C1CAF000886AA6 /* TopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCell.swift; sourceTree = "<group>"; };
+		8CAD35F829C1CB0A00886AA6 /* LiteratureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteratureCell.swift; sourceTree = "<group>"; };
+		8CAD35FA29C1D67C00886AA6 /* CompositionalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalModel.swift; sourceTree = "<group>"; };
+		8CAD35FC29C1EE7700886AA6 /* LiteratureCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteratureCellHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 		8C63FE3729BF1B8800121C8D /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				8CAD35F029C1C3C600886AA6 /* CompositionalCellFinal */,
 				8CAD35EB29C0D23100886AA6 /* CompositionalCellExample */,
 				8CAD35E729C0CCA000886AA6 /* FlowLayoutExample */,
 				8CAD35E829C0CCBB00886AA6 /* FlowLayoutFinal */,
@@ -148,6 +161,27 @@
 			path = CompositionalCellExample;
 			sourceTree = "<group>";
 		};
+		8CAD35F029C1C3C600886AA6 /* CompositionalCellFinal */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD35F329C1C54600886AA6 /* Cells */,
+				8CAD35F129C1C46700886AA6 /* CompositionalLayoutViewController.swift */,
+				8CAD35FA29C1D67C00886AA6 /* CompositionalModel.swift */,
+			);
+			path = CompositionalCellFinal;
+			sourceTree = "<group>";
+		};
+		8CAD35F329C1C54600886AA6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD35F429C1C7DF00886AA6 /* FeaturedCell.swift */,
+				8CAD35F629C1CAF000886AA6 /* TopCell.swift */,
+				8CAD35F829C1CB0A00886AA6 /* LiteratureCell.swift */,
+				8CAD35FC29C1EE7700886AA6 /* LiteratureCellHeader.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,13 +260,19 @@
 			files = (
 				8CAD35EF29C0D32800886AA6 /* CompositionalView.swift in Sources */,
 				8CAD35E329C0AF7900886AA6 /* Model.swift in Sources */,
+				8CAD35F929C1CB0A00886AA6 /* LiteratureCell.swift in Sources */,
 				8C63FE3D29BF1B8800121C8D /* ViewController.swift in Sources */,
 				8C63FE3929BF1B8800121C8D /* AppDelegate.swift in Sources */,
+				8CAD35FB29C1D67C00886AA6 /* CompositionalModel.swift in Sources */,
 				8CAD35ED29C0D26600886AA6 /* CompositionalCell.swift in Sources */,
 				8C63FE3B29BF1B8800121C8D /* SceneDelegate.swift in Sources */,
+				8CAD35F229C1C46700886AA6 /* CompositionalLayoutViewController.swift in Sources */,
+				8CAD35F529C1C7DF00886AA6 /* FeaturedCell.swift in Sources */,
+				8CAD35FD29C1EE7700886AA6 /* LiteratureCellHeader.swift in Sources */,
 				8CAD35DF29C0A3D700886AA6 /* FlowLayoutCell.swift in Sources */,
 				8CAD35EA29C0CCFD00886AA6 /* FlowLayoutViewController.swift in Sources */,
 				8CAD35E129C0A57B00886AA6 /* Cell.swift in Sources */,
+				8CAD35F729C1CAF000886AA6 /* TopCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
